@@ -1,12 +1,11 @@
-export default ({ body, initialState }) => {
+export default ({ appString }) => {
     return `<DOCTYPE html>
         <html>
-        <head>
-            <script>window.__APP_INITIAL_STATE__ = ${initialState}</script>
-        </head>
+        <head></head>
         <body>
-            <div id='root'>${body}</div>
+            <div id='mount'>${appString}</div>
             <script src='assets/bundle.js'></script>
         </body>
+        </html>
     `;
 }

@@ -7,5 +7,5 @@ render(
     <Router history={browserHistory}>
         {routes}
     </Router>, 
-    document.getElementById('root')
+    document.getElementById('mount')
 );

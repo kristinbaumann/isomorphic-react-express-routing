@@ -16,9 +16,9 @@ server.get('*', (req, res) => {
         } else if (redirectLocation) {
             res.redirect(302, redirectLocation.pathname + redirectLocation.search);
         } else if (renderProps) {
-            const content = renderToString(<RouterContext {...renderProps}/>);
+            const appString = renderToString(<RouterContext {...renderProps}/>);
             res.send(template({
-                body: content
+                appString
             }));
         } else {
             res.status(404).send('Not Found');
